@@ -59,11 +59,12 @@ def winner(board)
   position_3=board[win_combination[2]]
   if position_1=="X"&&position_2=="X"&&position_3=="X"
     return "X"
-  elseif position_1=="O"&&position_2=="O"&&position_3=="O"
-    "O"
   else
-    false
+    if position_1=="O"&&position_2=="O"&&position_3=="O"
+      return "O"
+    else
+      false
+    end
   end
 end
-return nil
 end
